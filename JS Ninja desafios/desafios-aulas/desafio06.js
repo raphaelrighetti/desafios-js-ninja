@@ -95,7 +95,7 @@ function convertToHex(color) {
         default:
              return 'Não temos o equivalente hexadecimal para ' + color + '.'
     }
-    return 'O hexadecimal para a cor ' + color + ' é ' +hexa + '.'
+    return 'O hexadecimal para a cor ' + color + ' é ' + hexa + '.'
 }
 
 /*
