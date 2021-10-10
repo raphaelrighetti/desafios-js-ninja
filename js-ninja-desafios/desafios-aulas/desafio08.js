@@ -75,10 +75,10 @@ function calculator(operador) {
         operacao = x % y;
         break;
       default:
-        return 'Operação inválida.'
+        return 'Operação inválida.';
     }
     return 'Resultado da operação: ' + x + ' ' + operador + ' ' + y + ' = ' + operacao + '.';
-  }
+  };
 }
 
 /*
