@@ -44,15 +44,9 @@
     - O desafio é fazer o retorno sem usar "if" ou "switch".
     */
     function isOperatorValid(operator) {
-        return function() {
-            console.log(operator === '+' || operator === '-' || operator === '*' || operator === '/' || operator === '%')
-            return '';
-        }
+        return operation[operator] !== undefined;
     }
-    var mais = isOperatorValid('+');
-    console.log(mais());
-    var banana = isOperatorValid('banana');
-    console.log(banana());
+    console.log(isOperatorValid('+'))
 
     /*
     Agora vamos criar a calculadora.
@@ -67,7 +61,7 @@
     os dois parâmetros da função de retorno de "calculator".
     */
     function calculator(operator) {
-        if(operator !== '+' && operator !== '-' && operator !== '*' && operator !== '/' && operator !== '%') {
+        if(!isOperatorValid(operator)) {
             return false
         }
         return function otherFunction(x, y) {
