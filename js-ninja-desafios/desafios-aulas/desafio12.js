@@ -35,13 +35,18 @@
     `name`: String
     `pages`: Number
     */
-    // ?
+    var book1 = {name: 'Psicose', pages: 240}
+    var book2 = {name: 'O Vilarejo', pages: 96}
+    var book3 = {name: 'O Homem de Giz', pages: 272}
+    books.push(book1);
+    books.push(book2);
+    books.push(book3);
     console.log( '\nLista de livros:' );
 
     /*
     Mostre no console todos os livros.
     */
-    // ?
+    console.log(books.join(', '));
 
     console.log( '\nLivro que está sendo removido:' );
     /*
