@@ -23,7 +23,7 @@
         age: 18,
         weight: 97,
         birthday: '24/11/2002'
-    }
+    };
 
     /*
     Use um loop para percorrer o objeto criado acima, mostrando no console
