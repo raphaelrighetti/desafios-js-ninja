@@ -42,9 +42,7 @@
     */
     console.log( '\nJust module of division by 2 or 3:' );
     var justMod2Or3 = justNumbers.filter(function(item, index, array) {
-        if(item % 2 == 0 || item % 3 == 0) {
-            return item;
-        }
+            return item % 2 == 0 || item % 3 == 0;
     });
     console.log(justMod2Or3);
 
@@ -83,10 +81,10 @@
     */
     console.log( '\nSeu nome na língua do "P":' );
     var name = ['Ra', 'pha', 'el'];
-    var nameP = name.map(function(item, index, array) {
-        return 'Pê-' + item;
-    });
-    console.log(nameP.join(''));
+    var nameP = name.reduce(function(acum, act) {
+        return acum + 'P' + act;
+    }, '');
+    console.log(nameP);
 
     /*
     Crie uma variável chamada `inversedName`, que reduzirá o array em uma string
@@ -117,7 +115,7 @@
     numberObjects.indexOf({ number: 2 }) > -1 
     ? console.log('Existe um objeto { number: 2 } em numberObjects!') 
     : console.log('Não existe um objeto { number: 2 } em numberObjects :(')
-    console.log('Não sei o porque disso ocorrer.');
+    console.log('Isso ocorre pois estamos criando um novo objeto no parâmetro, não fazendo referência ao objeto existente.');
 
     /*
     Fazendo o mesmo do exercício acima, mas começando a buscar do último índice,
@@ -127,7 +125,6 @@
     numberObjects.lastIndexOf({number: 2}, 2) > -1
     ? console.log('Existe um objeto { number: 2 } em numberObjects!')
     : console.log('Não existe um objeto { number: 2 } em numberObjects :(')
-    console.log('Continuo sem saber o por que disso ocorrer.')
 
     /*
     Verifique se `justMod2Or3` é um array. Se for, mostre-o no console, no
