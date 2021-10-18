@@ -31,11 +31,11 @@
     };
     this.getAge = function getAge() {
       return this.age;
-    }
+    };
     this.addAge = function addAge() {
       this.age += arguments[0];
       return this;
-    }
+    };
   }
 
   /*
