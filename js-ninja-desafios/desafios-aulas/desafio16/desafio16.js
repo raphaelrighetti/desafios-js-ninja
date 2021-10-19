@@ -82,6 +82,7 @@
         return stringNomesAmigos + 'são meus amigos.';
     }
     console.log(juntaNomesAmigos());
+    // usar o reduce quando for refazer
     
 
     /*
@@ -89,10 +90,7 @@
     Mostre o resultado no console.
     */
     console.log( '\nEra "Roberto", agora é:' );
-    var roberto = 'Roberto';
-    var robertoSplit = roberto.split('b');
-    robertoSplit[1] = robertoSplit[1].replace('o', 'a');
-    console.log(robertoSplit.join('b'));
+    console.log('Roberto'.replace('to', 'ta'));
 
     /*
     Mostre no console a parte "nando" da string "Fernando". Use o método que
