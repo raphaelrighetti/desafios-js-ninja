@@ -103,5 +103,5 @@
     function replaceText(regex, abertura, texto, fechamento) {
         return abertura + 'O texto dentro da tag "' + removeSimbolos(abertura) + '" é "' + texto + '"' + fechamento + '\n';
     }
-    console.log('<h1>Titulo da pagina</h1><p>Este e um paragrafo</p><footer>Rodape</footer>'.replace(/(<\w+>)([\w\s]+)(<\/\w+>)/g, replaceText));
+    console.log('<h1>Título da página</h1><p>Este é um parágrafo</p><footer>Rodapé</footer>'.replace(/(<\w+>)([\w\síáé]+)(<\/\w+>)/g, replaceText));
 })();
