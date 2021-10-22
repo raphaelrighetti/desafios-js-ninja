@@ -130,7 +130,7 @@
         - "agua_@evida.br.com"
     */
     function isValidEmail(email) {
-        var regex = /\w[\w+.]+@\w+\.\w{2,}(?:\.\w{1,2})?/;
+        var regex = /^\w[\w+.]+@\w+\.\w{2,}(?:\.\w{1,2})?$/;
         return regex.test(email);
     }
 })(window, document);
