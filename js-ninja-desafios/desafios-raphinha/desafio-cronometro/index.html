@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <title>Cronômetro</title>
+</head>
+<body>
+    <header id=cabecalho>
+        <h1>Cronômetro</h1>
+        <h2>raphinha<span>Show.</span></h2>
+    </header>
+    <div id="inputs">
+        <div id="temporizadores">
+            <input data-js="minutos" type="text" size="2" readonly="true">
+            <p>:</p>
+            <input data-js="segundos" type="text" size="2" readonly="true">
+        </div>
+        <div>
+            <button data-js="start">Start</button>
+            <button data-js="stop">Stop</button>
+            <button data-js="reset">Reset</button>
+        </div>
+    </div>
+    <script src="desafio-cronometro.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+header#cabecalho {
+    margin: 0 0 10px 0;
+    padding: 3px;
+    background-color: yellow;
+    border: 2px solid darkgoldenrod;
+    border-top: none;
+    text-shadow: 1px 1px 1px black;
+}
+#cabecalho h1 {
+    font-size: 25px;
+    margin: 0 auto 10px auto;
+}
+#cabecalho h2 {
+    font-size: 30px;
+    margin: 0 auto;
+}
+#cabecalho h2 span {
+    background-color: black;
+    padding: 3px;
+    text-decoration: underline;
+}
+#inputs {
+    margin: 30px auto;
+}
+#inputs input {
+    margin: 10px;
+}
+#inputs button {
+    margin: 10px 2px;
+}
+#temporizadores {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
