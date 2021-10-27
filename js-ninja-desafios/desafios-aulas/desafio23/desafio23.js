@@ -73,7 +73,7 @@ input;
         if(isLastIndexAnOperator(valorTela) === true) {
             removeLastIndex(valorTela)
         }
-        var valores = valorTela.match(/\d+[+x÷-]?/g);
+        var valores = valorTela.match(/-?\d+[+x÷-]?/g);
         valorTela = valores.reduce(function(acum, current) {
             var firstItem;
             if(isLastIndexAnOperator(acum) === true){
