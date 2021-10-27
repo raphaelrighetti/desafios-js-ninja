@@ -67,7 +67,7 @@
     */
     console.log( '\nFunção que limpa entrada do usuário (somente números):' );
     function justNumbers(stringNumbers) {
-        return stringNumbers.split(/\D/);
+        return stringNumbers.split(/\D+/g);
     }
     console.log(justNumbers.toString());
 
