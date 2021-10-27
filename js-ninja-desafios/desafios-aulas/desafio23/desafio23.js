@@ -122,9 +122,9 @@ input;
                 case '-':
                     return (Number(firstItem) - Number(lastItem)) + lastOperator;
                 case 'x':
-                    return Number((firstItem) * Number(lastItem)) + lastOperator;
+                    return (Number(firstItem) * Number(lastItem)) + lastOperator;
                 case '÷':
-                    return Number((firstItem) / Number(lastItem)) + lastOperator;
+                    return (Number(firstItem) / Number(lastItem)) + lastOperator;
             }
         });
         $tela.value = valorTela;
