@@ -37,6 +37,7 @@ input;
     Array.prototype.forEach.call($operatorButtons, function(button) {
         button.addEventListener('click', handleClickOperator, false);
     });
+    $operatorButtons[1].addEventListener('click', handleClickMinus, false);
     $equal.addEventListener('click', doOperation, false);
     $CE.addEventListener('click', clearEverything, false);
 
@@ -51,16 +52,32 @@ input;
     function handleClickOperator() {
         if(valorTela === '0') {
             return '';
+        } else if(isStringOnlyAnOperator(valorTela) === true) {
+            return '';
         } else if(isLastIndexAnOperator(valorTela) === true) {
             removeLastIndex(valorTela);
             valorTela += this.value;
-        } else {
+        }  else {
             valorTela += this.value;
         }
         $tela.value = valorTela;
     }
+    function handleClickMinus() {
+        if(valorTela === '0') {
+            valorTela = '-';
+        } else if(isLastIndexAnOperator(valorTela) === true) {
+            removeLastIndex(valorTela);
+            valorTela += '-'
+        } else {
+            valorTela += '-';
+        }
+        $tela.value = valorTela;
+    }
     function isLastIndexAnOperator(str) {
-        return /\d+[+x÷-]$/.test(str);
+        return /[+x÷-]$/.test(str);
+    }
+    function isStringOnlyAnOperator(str) {
+        return /^[+x÷-]$/.test(str)
     }
     function removeLastIndex(str) {
         valorTela = str.slice(0, -1);
