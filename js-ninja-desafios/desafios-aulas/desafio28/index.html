@@ -20,8 +20,12 @@
 <body>
     <form action="get">
         <input type="text" size="8" data-js="cep" maxlength="9" placeholder="XXXXX-XXX">
-        <button type="submit" data-js="submit">Enviar</button>
+        <button type="submit" data-js="submit">Consultar CEP</button>
     </form>
+    <div>
+        <label for="status">Status da Requisição:</label>
+        <input type="text" size="32" data-js="status" id="status" readonly="true">
+    </div>
     <div class="informacoes">
         <label for="estado">Estado:</label>
         <input type="text" size="16" data-js="estado" id="estado" readonly="true">
@@ -37,10 +41,6 @@
 
         <label for="numero">Número:</label>
         <input type="text" size="16" data-js="numero" id="numero">
-    </div>
-    <div>
-        <label for="status">Status da Requisição:</label>
-        <input type="text" size="16" data-js="status" id="status" readonly="true">
     </div>
     
     <script src="desafio28.js"></script>

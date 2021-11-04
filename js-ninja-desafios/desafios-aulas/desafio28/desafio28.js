@@ -1,4 +1,5 @@
 (function(window, document) {
+    'use strict';
     /*
     No HTML:
     - Crie um formulário com um input de texto que receberá um CEP e um botão
@@ -66,7 +67,7 @@
             case 0:
                 return 'Esperando envio.';
             case 1:
-                return 'Conexão aberta.';
+                return 'Buscando informações para o CEP ' + $cep.value + '...';
             case 2:
                 return 'Headers recebidos.';
             case 3:
@@ -78,12 +79,21 @@
     function isRequestOk() {
         return ajax.readyState === 4 && ajax.status === 200;
     }
+    function isCEPInvalid() {
+        return ajaxData.erro;
+    }
 
     function addAjaxEvent() {
         ajax.addEventListener('readystatechange', function() {
             $status.value = getStatus(ajax.readyState);
             if(isRequestOk() === true) {
                 ajaxData = JSON.parse(ajax.responseText);
+                if(isCEPInvalid() === true){
+                    $status.value = 'Não encontramos o endereço para o CEP ' + $cep.value + '.';
+                    removeInformation();
+                    return '';
+                }    
+                $status.value = 'Endereço referente ao CEP ' + $cep.value + ':'
                 addInformation();
             }
         }, false);
@@ -95,6 +105,12 @@
         $bairro.value = ajaxData.bairro;
         $endereco.value = ajaxData.logradouro;
         $numero.focus();
+    }
+    function removeInformation() {
+        $estado.value = '';
+        $cidade.value = '';
+        $bairro.value = '';
+        $endereco.value = '';
     }
 
     function ajaxRequisition(event) {
