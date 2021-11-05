@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            text-align: center
+        }
+        button {
+            margin: 10px;
+        }
+        img {
+            max-width: 100px;
+        }
+        table {
+            border: 2px solid black;
+            margin: 10px auto;
+            border-collapse: collapse;
+        }
+        th {
+            border: 1px solid black;
+            padding: 3px;
+        }
+        td {
+            border: 1px solid black;
+            padding: 3px;
+        }
+    </style>
+    <title>Desafio 29</title>
+</head>
+<body>
+    <header>
+        <h1 data-js="company-name"></h1>
+        <h2 data-js="company-number"></h2>
+    </header>
+    <form action="/" data-js="form-cadastro">
+        <label for="imagem-carro">URL Imagem do Carro:</label>
+        <input type="text" size="16" data-js="imagem-carro" id="imagem-carro">
+        
+        <label for="marca-modelo">Marca/Modelo:</label>
+        <input type="text" size="16" data-js="marca-modelo" id="marca-modelo">
+
+        <label for="ano">Ano:</label>
+        <input type="text" size="16" data-js="ano" id="ano" maxlength="4">
+
+        <label for="placa">Placa:</label>
+        <input type="text" size="16" data-js="placa" id="placa" maxlength="8">
+
+        <label for="cor">Cor:</label>
+        <input type="text" size="16" data-js="cor" id="cor">
+
+        <div>
+            <button type="submit">Cadastrar</button>
+        </div>
+    </form>
+    <table>
+        <thead>
+            <th>Imagem do Carro</th>
+            <th>Marca/Modelo</th>
+            <th>Ano</th>
+            <th>Placa</th>
+            <th>Cor</th>
+        </thead>
+        <tbody data-js="tbody">
+        </tbody>
+    </table>
+    
+    <script src="DOM.js"></script>
+    <script src="desafio29.js"></script>
+</body>
+</html>
