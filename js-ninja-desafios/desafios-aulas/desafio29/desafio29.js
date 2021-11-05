@@ -41,22 +41,10 @@
         var $placa = new DOM('[data-js="placa"]');
         var $cor = new DOM('[data-js="cor"]');
         var $tbody = new DOM('[data-js="tbody"]');
-        var tdCarroImagem = document.createElement('td');
-        var tdMarcaModelo = document.createElement('td');
-        var tdAno = document.createElement('td');
-        var tdPlaca = document.createElement('td');
-        var tdCor = document.createElement('td');
-        var arrTd = [tdCarroImagem, tdMarcaModelo, tdAno, tdPlaca, tdCor];
-        var ajax = new XMLHttpRequest()
-        var ajaxData;
     
         $formCadastro.on('submit', handleSubmit);
         $placa.on('input', formatLicensePlate);
         $ano.on('input', formatYear);
-        ajax.addEventListener('readystatechange', handleAjaxStateChange, false);
-    
-        ajax.open('GET', 'company.json');
-        ajax.send();
     
         function handleSubmit(event) {
             event.preventDefault();
@@ -108,22 +96,6 @@
     
         function formatYear() {
             $ano.element[0].value = $ano.element[0].value.replace(/\D+/g, '');
-        }
-    
-        function handleAjaxStateChange() {
-            if(isRequestOk() === true) {
-                ajaxData = JSON.parse(ajax.responseText);
-                fillCompanyInformation();
-            }
-        }
-    
-        function isRequestOk() {
-            return ajax.readyState === 4 && ajax.status === 200;
-        }
-    
-        function fillCompanyInformation() {
-            $companyName.element[0].textContent = ajaxData.name;
-            $companyNumber.element[0].textContent = ajaxData.phone;
         }
     }
     
